@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: "What level of league should I play?",
+    answer: "We have A, B, and C divisions.<br><br>As a rule of thumb, A is for advanced players, B is for intermediate (or “bar/garage”) players, and C is for beginners and casual players. If you’ve never played before, we recommend starting in our C division."
+  },
+  {
+    question: "How do I register for the league?",
+    answer: "If you have a team of players (minimum four), register the whole team with <a href=\"/forms/signup.html\" class=\"text-accent-red underline hover:text-red-700\">our team signup form</a>. We can also help you figure out a home bar, too — just note that when you sign up.<br><br>If you’re a free agent looking to join a team, email <a href=\"mailto:info@scvda.org\" class=\"text-accent-red underline hover:text-red-700\">info@scvda.org</a> for help with finding a team."
+  },
+  {
+    question: "How much does it cost to play in the league? What does this fee cover?",
+    answer: "League dues are $25 per player. This covers DartConnect software (which provides real-time match tracking and player stats), occasional venue equipment upgrades, and the end-of-season awards banquet. You will also have use of a free DartConnect \"Guest Account\" during the season."
+  },
+  {
+    question: "How long does the season last?",
+    answer: "Each season is fourteen or fifteen weeks of play, with breaks for some holidays when needed. There are generally two weeks of playoffs at the end of the season, plus one additional week for our banquet and awards party.<br><br>Our two seasons run approximately Jan–Jun and Aug–Dec."
+  },
+  {
+    question: "What do I need to play?",
+    answer: "Just a set of steel tip darts! They can be purchased on Amazon or from a local darts supply store. The league can make recommendations, if desired.<br><br>A tablet is helpful for scorekeeping, but is not mandatory. (It is helpful if at least one person on each team has an Android or iOS tablet.)"
+  },
+  {
+    question: "What is the match format? What games are played?",
+    answer: "The exact format varies by division, but each match is a mix of 501, 301, Cricket and a \"Team 01\" game. There are 15-17 legs played per match, which are split into six separate rounds of four slots per team."
+  },
+  {
+    question: "What does playing in the league involve?",
+    answer: "We have two league seasons per year (approx Jan–June and Aug–Dec). Matches are weekly at 7:30pm (currently only Thursday evenings). Each match takes about 3 hours to complete.<br><br>It is not necessary to be able to attend 100% of matches in a season, as most teams have a roster of more than the required 4 players."
+  },
+  {
+    question: "How do I report scores?",
+    answer: "Please use our <a href=\"/rr/\" class=\"text-accent-red underline hover:text-red-700\">Results Reporting Form</a> to submit scores.<br><br>Match scores must be reported within 24 hours after weekly match start time (typically this means results are due Fridays by 7:30pm).<br><br>If you make a mistake on the submission, submit them again -- the most recent submittion is used as \"the right one.\" There is no penalty for correcting a match, provided it was initially submitted on time."
+  },
+  {
+    question: "How do I pay dues? When are they due?",
+    answer: "Dues can be paid via cash or check (payable to Santa Clara Valley Darts Association) given to the Treasurer, or made via credit card online through CheddarUp.<br><br>Note that the online payment link changes each season, so look out for an email from the board with the link sent to the Captain's Mailing List. You can also find the link in your Captain’s Packet.<br><br>If you want to pay via cash or check but don’t see the Treasurer, you can arrange to mail your dues or handoff your payment through specific bar locations. Contact the Treasurer directly to arrange this, if needed."
+  },
+  {
+    question: "How do I add a player to my team after the initial roster submission?",
+    answer: "Use the <a href=\"/forms/player_add.html\" class=\"text-accent-red underline hover:text-red-700\">Player Add Form</a>. Remember, the deadline to add new players to a team roster is the halfway point in a season."
+  },
+  {
+    question: "What if I lose a player after the “player add” deadline?",
+    answer: "Players may not be added after the “player add” deadline (at the halfway point of the season). However, if your team loses a player, you may replace that player, regardless of week in the season."
+  },
+  {
+    question: "Is SCVDA a 501c(3)?",
+    answer: "Yes!"
+  },
+  {
+    question: "How do I best use DartConnect?",
+    answer: "DartConnect has plenty of <a href=\"https://www.dartconnect.com/how-to-links/\" target=\"_blank\" class=\"text-accent-red underline hover:text-red-700\">online resources</a>."
+  }
+];
+---
+
+<Layout>
+  <div class="max-w-4xl mx-auto py-8">
+    <h1 class="text-primary-black border-b-2 border-accent-red font-oswald text-4xl font-bold pb-4 mb-8">
+      Frequently Asked Questions
+    </h1>
+
+    <div class="space-y-4">
+      {faqs.map((faq) => (
+        <details class="group bg-white border border-light-silver rounded-md overflow-hidden shadow-sm">
+          <summary class="bg-light-silver text-primary-black font-bold font-inter cursor-pointer p-4 list-none flex justify-between items-center hover:bg-gray-200 transition-colors">
+            <span class="pr-4">{faq.question}</span>
+            <span class="text-xl flex-shrink-0 group-open:hidden transition-transform duration-200">+</span>
+            <span class="text-xl flex-shrink-0 hidden group-open:block transition-transform duration-200">-</span>
+          </summary>
+          <div class="p-4 font-inter text-primary-black leading-relaxed" set:html={faq.answer} />
+        </details>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Optional: Custom marker hiding for Webkit browsers */
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
