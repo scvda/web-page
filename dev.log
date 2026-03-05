@@ -1,0 +1,16 @@
+
+> app@0.0.1 dev
+> astro dev
+
+05:41:05 [types] Generated 1ms
+05:41:05 [content] Syncing content
+05:41:05 [content] Synced content
+05:41:06 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.18.0 ready in 381 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+05:41:06 watching for file changes...
+05:41:53 [200] / 72ms
