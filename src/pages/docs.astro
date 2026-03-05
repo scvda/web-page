@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const docCategories = [
+  {
+    category: 'Rules & Bylaws',
+    docs: [
+      { title: 'SCVDA Rules of Play', url: 'https://docs.google.com/document/d/example1/view' },
+      { title: 'SCVDA Constitution & Bylaws', url: 'https://docs.google.com/document/d/example2/view' }
+    ]
+  },
+  {
+    category: 'Score Sheets & Forms',
+    docs: [
+      { title: 'Weekly Score Sheet', url: 'https://docs.google.com/spreadsheets/d/example3/view' },
+      { title: 'Membership Application', url: 'https://docs.google.com/document/d/example4/view' },
+      { title: 'Match Protest Form', url: 'https://docs.google.com/document/d/example5/view' }
+    ]
+  },
+  {
+    category: 'Meeting Minutes',
+    docs: [
+      { title: 'January 2024 Board Meeting', url: 'https://docs.google.com/document/d/example6/view' },
+      { title: 'February 2024 Board Meeting', url: 'https://docs.google.com/document/d/example7/view' },
+      { title: 'Spring 2024 Captains Meeting', url: 'https://docs.google.com/document/d/example8/view' }
+    ]
+  }
+];
+---
+
+<Layout>
+	<div class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+		<h1 class="text-4xl md:text-5xl font-oswald font-bold text-primary-black mb-12 border-b-4 border-accent-red pb-4 inline-block">
+			Document Library
+		</h1>
+
+		<div class="space-y-12">
+			{docCategories.map((cat) => (
+				<section>
+					<h2 class="text-2xl md:text-3xl font-inter font-bold text-primary-black mb-6 border-b-2 border-light-silver pb-2">
+						{cat.category}
+					</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						{cat.docs.map((doc) => (
+							<a
+								href={doc.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center p-4 bg-white border border-light-silver rounded-lg shadow-sm hover:bg-light-silver hover:text-accent-red transition-colors duration-200 group"
+							>
+								<svg
+									class="w-6 h-6 mr-3 text-gray-500 group-hover:text-accent-red transition-colors duration-200 flex-shrink-0"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+								</svg>
+								<span class="font-inter font-medium leading-tight">
+									{doc.title}
+								</span>
+							</a>
+						))}
+					</div>
+				</section>
+			))}
+		</div>
+	</div>
+</Layout>
