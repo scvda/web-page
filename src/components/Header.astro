@@ -1,13 +1,12 @@
 ---
-// Header.astro
+import { Image } from 'astro:assets';
+import logo from '../assets/SCVDA_Logo_Large_Color.png';
 ---
 <header class="bg-primary-black text-white px-6 py-4">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center space-x-4">
-      <!-- SCVDA Logo Placeholder -->
-      <div class="w-10 h-10 bg-light-silver text-primary-black flex items-center justify-center font-oswald font-bold rounded-full">
-        Logo
-      </div>
+      <!-- SCVDA Logo -->
+      <Image src={logo} alt="SCVDA Logo" height={40} class="h-10 w-auto" />
       <a href="/" class="text-2xl font-oswald font-bold tracking-wide">SCVDA</a>
     </div>
 
