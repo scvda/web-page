@@ -2,22 +2,26 @@
 > app@0.0.1 dev
 > astro dev
 
-03:33:17 [types] Generated 1ms
-03:33:17 [content] Syncing content
-03:33:17 [content] Synced content
-03:33:17 [vite] Re-optimizing dependencies because vite config has changed
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
 
- astro  v5.18.0 ready in 589 ms
+23:05:21 [types] Generated 1ms
+23:05:21 [content] Syncing content
+23:05:21 [content] Synced content
+
+ astro  v5.18.0 ready in 383 ms
 
 ┃ Local    http://localhost:4321/
 ┃ Network  use --host to expose
 
-03:33:17 watching for file changes...
+23:05:21 watching for file changes...
 
- update  ▶ New version of Astro available: 6.1.4
+ update  ▶ New version of Astro available: 6.1.5
   Run npx @astrojs/upgrade to update
 
-03:34:36 [200] / 71ms
-03:34:37 [200] /_image 247ms
-03:34:57 [200] / 13ms
-03:34:58 [200] /_image 148ms
+23:05:40 [200] / 140ms
+23:05:41 [200] /_image 474ms
+23:05:57 [200] / 11ms
+23:05:57 [200] /_image 137ms
