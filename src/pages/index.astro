@@ -26,27 +26,29 @@ const recentAnnouncements = announcements
 				Latest Announcements
 			</h2>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-				{recentAnnouncements.map((announcement, index) => (
-					<div class="bg-white rounded-lg shadow-md border border-light-silver overflow-hidden">
-						<div class={`${index % 2 === 0 ? 'bg-accent-red' : 'bg-light-silver'} ${index % 2 === 0 ? 'text-white' : 'text-primary-black'} py-3 px-4 flex justify-between items-center`}>
-							<h3 class="text-xl font-oswald font-semibold tracking-wide">{announcement.title}</h3>
+			<div class="max-w-3xl mx-auto">
+				<div class="border-2 border-light-silver rounded-xl p-4 bg-gray-50 h-[400px] overflow-y-auto space-y-4 shadow-inner">
+					{recentAnnouncements.map((announcement, index) => (
+						<div class="bg-white rounded-lg shadow-md border border-light-silver overflow-hidden">
+							<div class={`${index % 2 === 0 ? 'bg-accent-red' : 'bg-light-silver'} ${index % 2 === 0 ? 'text-white' : 'text-primary-black'} py-3 px-4 flex justify-between items-center`}>
+								<h3 class="text-xl font-oswald font-semibold tracking-wide">{announcement.title}</h3>
+							</div>
+							<div class="p-6 font-inter text-gray-800">
+								<p class="text-sm text-gray-500 italic mb-3">
+									{new Date(announcement.date).toLocaleDateString('en-US', {
+										year: 'numeric',
+										month: 'long',
+										day: 'numeric'
+									})}
+								</p>
+								<p class="leading-relaxed">{announcement.body}</p>
+							</div>
 						</div>
-						<div class="p-6 font-inter text-gray-800">
-							<p class="text-sm text-gray-500 italic mb-3">
-								{new Date(announcement.date).toLocaleDateString('en-US', {
-									year: 'numeric',
-									month: 'long',
-									day: 'numeric'
-								})}
-							</p>
-							<p class="leading-relaxed">{announcement.body}</p>
-						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 
-			{announcements.length > 5 && (
+			{announcements.length > 0 && (
 				<div class="mt-8 text-center">
 					<a href="/announcements-history" class="inline-block bg-primary-black hover:bg-gray-800 text-white font-oswald font-bold py-2 px-6 rounded transition-colors">
 						See old announcements
