@@ -2,16 +2,19 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/SCVDA_Logo_Large_Color.png';
 ---
-<header class="bg-primary-black text-white px-6 py-4">
+<header class="bg-light-silver text-primary-black px-6 py-4 shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
     <div class="flex items-center space-x-4">
       <!-- SCVDA Logo -->
-      <Image src={logo} alt="SCVDA Logo" height={40} class="h-10 w-auto" />
-      <a href="/" class="text-2xl font-oswald font-bold tracking-wide">SCVDA</a>
+      <Image src={logo} alt="SCVDA Logo" height={80} class="h-20 w-auto" />
+      <a href="/" class="text-xl md:text-2xl font-oswald font-bold tracking-wide">
+        <span class="hidden sm:inline">Santa Clara Valley Darts Association (SCVDA)</span>
+        <span class="sm:hidden">SCVDA</span>
+      </a>
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-6 font-inter font-medium text-light-silver">
+    <nav class="hidden lg:flex space-x-6 font-inter font-medium text-gray-700">
       <a href="/" class="hover:text-accent-red transition-colors">Home</a>
       <a href="/league-play" class="hover:text-accent-red transition-colors">League Play</a>
       <a href="/about" class="hover:text-accent-red transition-colors">About</a>
@@ -20,19 +23,19 @@ import logo from '../assets/SCVDA_Logo_Large_Color.png';
     </nav>
 
     <!-- Mobile Hamburger Menu Button -->
-    <button id="mobile-menu-button" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none" aria-label="Toggle menu">
-      <span class="block w-6 h-0.5 bg-light-silver rounded transition-transform duration-300"></span>
-      <span class="block w-6 h-0.5 bg-light-silver rounded transition-opacity duration-300"></span>
-      <span class="block w-6 h-0.5 bg-light-silver rounded transition-transform duration-300"></span>
+    <button id="mobile-menu-button" class="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none" aria-label="Toggle menu">
+      <span class="block w-6 h-0.5 bg-primary-black rounded transition-transform duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary-black rounded transition-opacity duration-300"></span>
+      <span class="block w-6 h-0.5 bg-primary-black rounded transition-transform duration-300"></span>
     </button>
   </div>
 
   <!-- Mobile Navigation -->
-  <nav id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col space-y-3 font-inter font-medium text-light-silver">
-    <a href="/" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-700">Home</a>
-    <a href="/league-play" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-700">League Play</a>
-    <a href="/about" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-700">About</a>
-    <a href="/faq" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-700">FAQ</a>
+  <nav id="mobile-menu" class="hidden lg:hidden mt-4 flex flex-col space-y-3 font-inter font-medium text-gray-700">
+    <a href="/" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-200">Home</a>
+    <a href="/league-play" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-200">League Play</a>
+    <a href="/about" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-200">About</a>
+    <a href="/faq" class="hover:text-accent-red transition-colors block py-2 border-b border-gray-200">FAQ</a>
     <a href="/docs" class="hover:text-accent-red transition-colors block py-2">Docs</a>
   </nav>
 </header>
