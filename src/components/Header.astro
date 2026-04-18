@@ -4,14 +4,14 @@ import logo from '../assets/SCVDA_Logo_Large_Color.png';
 ---
 <header class="bg-light-silver text-primary-black px-6 py-4 shadow-sm">
   <div class="max-w-7xl mx-auto flex items-center justify-between">
-    <div class="flex items-center space-x-4">
+    <a href="/" class="flex items-center space-x-4 group">
       <!-- SCVDA Logo -->
       <Image src={logo} alt="SCVDA Logo" height={80} class="h-20 w-auto" />
-      <a href="/" class="text-xl md:text-2xl font-oswald font-bold tracking-wide">
+      <div class="text-xl md:text-2xl font-oswald font-bold tracking-wide text-primary-black">
         <span class="hidden sm:inline">Santa Clara Valley Darts Association (SCVDA)</span>
         <span class="sm:hidden">SCVDA</span>
-      </a>
-    </div>
+      </div>
+    </a>
 
     <!-- Desktop Navigation -->
     <nav class="hidden lg:flex space-x-6 font-inter font-medium text-gray-700">
