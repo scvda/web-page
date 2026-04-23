@@ -1,0 +1,27 @@
+
+> app@0.0.1 dev
+> astro dev --host 0.0.0.0
+
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
+
+00:12:53 [types] Generated 1ms
+00:12:53 [content] Syncing content
+00:12:53 [content] Synced content
+
+ astro  v5.18.0 ready in 407 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  http://192.168.0.2:4321/
+
+00:12:53 watching for file changes...
+
+ update  ▶ New version of Astro available: 6.1.9
+  Run npx @astrojs/upgrade to update
+
+00:13:34 [200] /about 102ms
+00:13:36 [200] /_image 462ms
+00:13:36 [200] /_image 655ms
+00:13:36 [200] /_image 946ms
