@@ -5,6 +5,13 @@ import announcements from '../data/announcements.json';
 const recentAnnouncements = announcements
 	.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 	.slice(0, 5);
+
+function formatBody(body: string) {
+	return body.replace(
+		/\[([^\]]+)\]\(([^)]+)\)/g,
+		'<a href="$2" target="_blank" rel="noopener noreferrer" class="text-accent-red hover:underline">$1</a>'
+	);
+}
 ---
 
 <Layout>
@@ -45,7 +52,7 @@ const recentAnnouncements = announcements
 									day: 'numeric'
 								})}
 							</p>
-							<p class="leading-relaxed">{announcement.body}</p>
+							<p class="leading-relaxed whitespace-pre-wrap" set:html={formatBody(announcement.body)} />
 						</div>
 					</div>
 				))}
