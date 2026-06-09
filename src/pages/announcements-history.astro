@@ -20,7 +20,7 @@ function formatBody(body: string) {
 				Announcement History
 			</h1>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="grid grid-cols-1 gap-8 max-w-4xl">
 				{sortedAnnouncements.map((announcement, index) => (
 					<div class="bg-white rounded-lg shadow-md border border-light-silver overflow-hidden">
 						<div class={`${index % 2 === 0 ? 'bg-accent-red' : 'bg-light-silver'} ${index % 2 === 0 ? 'text-white' : 'text-primary-black'} py-3 px-4 flex justify-between items-center`}>
