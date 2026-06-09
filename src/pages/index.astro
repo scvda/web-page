@@ -4,7 +4,7 @@ import announcements from '../data/announcements.json';
 
 const recentAnnouncements = announcements
 	.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-	.slice(0, 5);
+	.slice(0, 3);
 
 function formatBody(body: string) {
 	return body.replace(
@@ -58,10 +58,10 @@ function formatBody(body: string) {
 				))}
 			</div>
 
-			{announcements.length > 5 && (
+			{announcements.length > 3 && (
 				<div class="mt-8 text-center">
 					<a href="/announcements-history" class="inline-block bg-primary-black hover:bg-gray-800 text-white font-oswald font-bold py-2 px-6 rounded transition-colors">
-						See old announcements
+						See older announcements
 					</a>
 				</div>
 			)}
